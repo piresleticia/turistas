@@ -10,7 +10,7 @@
                 HorizontalOptions="Center"/>
 
           <Button Text="Inicio"
-              
+                 Clicked="ClicarInicio"
                  BorderColor="White"
                  TextColor="White"
                  Margin="10, 300, 10, 20"

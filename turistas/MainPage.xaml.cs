@@ -8,6 +8,11 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	 private void ClicarInicio(object sender, EventArgs args) 
+	{
+	  Application.Current.MainPage = new PaginaUmPage();
+	  
+	}
 
 }
 
