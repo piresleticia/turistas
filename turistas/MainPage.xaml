@@ -6,8 +6,7 @@
     <Grid>
             <Image
                 Source="inicio.jpg"
-                HeightRequest="800"
-                HorizontalOptions="Center"/>
+                 Aspect="AspectFill"/>
 
           <Button Text="Inicio"
                  Clicked="ClicarInicio"

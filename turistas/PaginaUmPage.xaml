@@ -6,9 +6,98 @@
 
 
  <Grid>
-            <Image Source="fundo.jpg"/>
+      <Grid.RowDefinitions>    
+       <RowDefinition Height="60"/>
+       <RowDefinition Height="60"/>
+       <RowDefinition Height="60"/>
+        <RowDefinition Height="60"/>
+        </Grid.RowDefinitions> 
 
-            <Image x:Name="vaca.jpg"/>
+            <Image Source="fundo.jpg"
+                Aspect="AspectFill"/>
+         
+
+          <Button Text="Voltar"
+                 Clicked="Clicarvoltar"
+                 BorderColor="White"
+                 TextColor="White"
+                 Margin="10, 300, 10, 20"
+                 HeightRequest="60"
+                 CornerRadius="30"
+                 BackgroundColor="#c999c3"
+                 FontSize="20"
+                 VerticalOptions="EndAndExpand"
+                 HorizontalOptions="FillAndExpand"/>
+
+
+    
+      <Grid.RowDefinitions>    
+       <RowDefinition Height="200"/>
+       <RowDefinition Height="*"/>
+      <RowDefinition Height="50"/>
+        <RowDefinition Height="50"/>
+    </Grid.RowDefinitions> 
+
+
+
+
+
+        <Image x:Name="imgpersona">
+          
+
+        <ProgressBar x:Name="progressBarFome"/>
+
+
+                 <Image Source="aguavaca.webp"
+                 Grid.Row="0"
+                 Grid.Column="0"/>
+ 
+      <Image Source="carinho2.png"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+ 
+
+ <Image Source="cenouracavalo.jpg"
+                 Grid.Row="2"
+                 Grid.Column="0"/>
+
+
+
+ <Image Source="cenouracavalo.jpg"
+                 Grid.Row="3"
+                 Grid.Column="0"/>
+
+
+ <Image Source="pastovaca.png"
+                 Grid.Row="4"
+                 Grid.Column="0"/>
+
+
+
+
+<ProgressBar= x:Name="progressBarCarinho"
+               ProgressColor="black"
+               Width="100"
+               Height="20"
+               Grid.Row="0"
+               Grid.ColumnSpan="5"/>
+
+
+<ProgressBar= x:Name="progressSede"
+               ProgressColor="black"
+               Width="100"
+               Height="20"
+               Grid.Row="1"
+               Grid.ColumnSpan="5"/>
+
+
+<ProgressBar= x:Name="progressFome"
+               ProgressColor="black"
+               Width="100"
+               Height="20"
+               Grid.Row="2"
+               Grid.ColumnSpan="5"/>
+
 
 </Grid>
 </ContentPage>
