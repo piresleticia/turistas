@@ -2,6 +2,7 @@ using Microsoft.Maui.Handlers;
 
 namespace turistas;
 
+
 public partial class PaginaUmPage : ContentPage
 {
 
@@ -17,23 +18,10 @@ public partial class PaginaUmPage : ContentPage
 	  
 	}
 
-
-       {atual= fazenda;
-
-       imgPersonagem.Source = atual.GetNomeDaImagem(); 
-       progressBarFome.Progress = atual.GetFome();
-	   }
-void quandoclicartrocar(object sender, EventArgs args) 
-{
-	atual = nome da personagem;
 }
+        
 
 
 
 
 
-
-
-
-
-}
