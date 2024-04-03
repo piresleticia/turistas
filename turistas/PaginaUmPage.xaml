@@ -5,13 +5,13 @@
  
 
 
- <Grid>
+    <Grid>
 
-     <Image     Source="fundo.jpg"
+        <Image  Source="fundo.jpg"
                 Aspect="AspectFill"/>
          
 
-    <Button     Text="Voltar"
+        <Button  Text="Voltar"
                 Clicked="Clicarvoltar"
                 BorderColor="White"
                 TextColor="White"
@@ -22,11 +22,65 @@
                 FontSize="20"
                 VerticalOptions="EndAndExpand"
                 HorizontalOptions="FillAndExpand"/>
-
-    
    
 
-   
+        <Image x:Name="imagem"
+                Aspect="Fill"/>
+
+        <Frame BackgroundColor="#c999c3"
+                HeightRequest="150"
+                VerticalOptions="Start"
+                CornerRadius="30"
+                Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
           
-</Grid>
+                <Image Source="agua.jpg"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+                    <ProgressBar x:Name="ProgressBarSede"
+                                ProgressColor="White"
+                                Width="100"
+                                Height="20"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
+
+                
+                <Image Source="cenoura.png"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+
+                <ProgressBar x:Name="ProgressBarFome"
+                                ProgressColor="White"
+                                Width="100"
+                                Height="20"
+                                Grid.Row="1"
+                                Grid.Column="1"/>
+                    
+                <Image Source="carinho.png"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+
+                    
+                <ProgressBar x:Name="ProgressBarCarinho"
+                            ProgressColor="White"
+                            Width="100"
+                            Height="20"
+                            Grid.Row="2"
+                            Grid.Column="1"/>
+    
+
+            </Grid>
+        </Frame>
+    </Grid>
 </ContentPage>
