@@ -21,6 +21,8 @@ public partial class PaginaUmPage : ContentPage
 
 		imgcavalo.Source = atual.GetNomedafoto();
 
+		ProgressFome.Progress = atual.GetFome();
+
 
 	}
 
@@ -48,6 +50,12 @@ public partial class PaginaUmPage : ContentPage
 	   imgcavalo.Source = atual.GetNomedafoto();
 	   
 	}
+
+	void maisfome(object sender, EventArgs args) 
+{
+	atual.SetFome(atual.GetFome() + 0.1);
+}
+
 }
         
 

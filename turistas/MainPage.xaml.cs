@@ -1,4 +1,6 @@
-﻿namespace turistas;
+﻿using Microsoft.Maui.Controls;
+
+namespace turistas;
 
 public partial class MainPage : ContentPage
 {
@@ -13,7 +15,6 @@ public partial class MainPage : ContentPage
 	  Application.Current.MainPage = new PaginaUmPage();
 	  
 	}
-
 
 }
 

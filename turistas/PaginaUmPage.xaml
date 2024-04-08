@@ -8,14 +8,20 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="50"/>
-            </Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
 
+          <Grid.RowDefinitions>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
 
         <Image  Source="fundo.jpg"
                 Aspect="AspectFill"
-                Grid.ColumnSpan="2"/>
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="3"/>
          
 
         <Button  Text="Voltar"
@@ -28,19 +34,22 @@
                 BackgroundColor="#c999c3"
                 FontSize="20"
                 Grid.ColumnSpan="2"
+                Grid.Row="2"
                 VerticalOptions="EndAndExpand"
                 HorizontalOptions="FillAndExpand"/>
    
 
         <Image x:Name="imgcavalo"
-                Aspect="Fill"/>
+               
+                Grid.Row="1"
+                Grid.Column="0"/>
 
         <Frame BackgroundColor="#c999c3"
                 HeightRequest="150"
                 VerticalOptions="Start"
                 CornerRadius="30"
                 Grid.ColumnSpan="2"
-
+                Grid.Row="0"
                 Margin="20">
             <Grid>
                 <Grid.RowDefinitions>    
@@ -70,7 +79,7 @@
                     Grid.Row="1"
                     Grid.Column="0"/>
 
-                <ProgressBar x:Name="ProgressBarFome"
+                <ProgressBar x:Name="ProgressFome"
                                 ProgressColor="White"
                                 Width="100"
                                 Height="20"
@@ -99,7 +108,8 @@
                        BackgroundColor="#c999c3"
                        HorizontalOptions="Fill"
                        VerticalOptions="Fill"
-                       Grid.Column="1">
+                       Grid.Column="1"
+                       Grid.Row="1">
                          
                          <Grid>
                            <Grid.RowDefinitions>    
@@ -114,7 +124,7 @@
                               </Grid.ColumnDefinitions>
 
                               <ImageButton Source="flecha.png"
-                              Clicked="TrocaPersonagem"
+                               Clicked="TrocaPersonagem"
                                Grid.Row="0"
                                Grid.Column="0"/>
 
@@ -124,7 +134,8 @@
                                 
 
                                <ImageButton Source="cenoura.png"
-                                 Grid.Row="2"
+                                Clicked="maisfome"
+                                 Grid.Row="2"                                
                                  Grid.Column="0"/>
 
                                  
