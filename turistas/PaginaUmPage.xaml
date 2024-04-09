@@ -69,6 +69,7 @@
 
                     <ProgressBar x:Name="ProgressBarSede"
                                 ProgressColor="White"
+                               
                                 Width="100"
                                 Height="20"
                                 Grid.Row="0"
@@ -79,8 +80,9 @@
                     Grid.Row="1"
                     Grid.Column="0"/>
 
-                <ProgressBar x:Name="ProgressFome"
+                <ProgressBar x:Name="ProgressBarFome"
                                 ProgressColor="White"
+                                
                                 Width="100"
                                 Height="20"
                                 Grid.Row="1"
@@ -93,6 +95,7 @@
                     
                 <ProgressBar x:Name="ProgressBarCarinho"
                             ProgressColor="White"
+                           
                             Width="100"
                             Height="20"
                             Grid.Row="2"
@@ -129,6 +132,7 @@
                                Grid.Column="0"/>
 
                                <ImageButton Source="agua.jpg"
+                                 Clicked="maissede"
                                  Grid.Row="1"
                                  Grid.Column="0"/>
                                 
@@ -141,6 +145,7 @@
                                  
                                <ImageButton Source="carinho.png"
                                  Grid.Row="3"
+                                  Clicked="maiscarinho"
                                  Grid.Column="0"/>
                         </Grid> 
                         </Frame> 

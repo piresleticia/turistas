@@ -53,9 +53,27 @@ public partial class PaginaUmPage : ContentPage
 
 	void maisfome(object sender, EventArgs args) 
 {
-	atual.SetFome(atual.GetFome() + 0.1);
+	atual.SetFome(atual.GetFome() + 0.05);
+	AtualizaPersonagem();
 }
 
+	void maissede(object sender, EventArgs args) 
+{
+	atual.SetSede(atual.GetSede() + 0.05);
+	AtualizaPersonagem();
+}
+	void maiscarinho(object sender, EventArgs args) 
+{
+	atual.SetCarinho(atual.Getcarinho() + 0.05);
+	AtualizaPersonagem();
+}
+
+
+   void AtualizaPersonagem();
+     ProgressBarSede.Progress = atual.GetSede();
+	  ProgressBarFome.Progress = atual.GetFome();
+	   ProgressBarCarinho.Progress = atual.GetCarinho();
+	   
 }
         
 

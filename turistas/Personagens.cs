@@ -4,7 +4,7 @@ namespace turistas;
 public class Personagens
 
 {
-    public string Nomedafoto;
+    protected string Nomedafoto;
     protected double Fome;
     protected double Sede;
     protected double Carinho;
@@ -35,7 +35,7 @@ public double GetSede()
  {
     Carinho = C;
  } 
- public double Getcarinho()
+ public double GetCarinho()
  {
     return Carinho;
  }
