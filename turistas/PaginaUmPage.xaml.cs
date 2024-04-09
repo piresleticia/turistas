@@ -21,7 +21,18 @@ public partial class PaginaUmPage : ContentPage
 
 		imgcavalo.Source = atual.GetNomedafoto();
 
-		ProgressFome.Progress = atual.GetFome();
+		ProgressBarFome.Progress = atual.GetFome();
+
+		var timer=
+		AppAction.Current.Dispatcher.CreateTimer();
+		timer.Interval=
+		TimeSpan.FromSeconds(1);
+		timer.Tick+=(s,e)=>
+		PassouTempo();
+		timer.Start();
+
+
+		
 
 
 	}
@@ -48,6 +59,7 @@ public partial class PaginaUmPage : ContentPage
 	 }
 
 	   imgcavalo.Source = atual.GetNomedafoto();
+	   AtualizaPersonagem();
 	   
 	}
 
@@ -64,16 +76,30 @@ public partial class PaginaUmPage : ContentPage
 }
 	void maiscarinho(object sender, EventArgs args) 
 {
-	atual.SetCarinho(atual.Getcarinho() + 0.05);
+	atual.SetCarinho(atual.GetCarinho() + 0.05);
 	AtualizaPersonagem();
 }
 
 
-   void AtualizaPersonagem();
-     ProgressBarSede.Progress = atual.GetSede();
-	  ProgressBarFome.Progress = atual.GetFome();
-	   ProgressBarCarinho.Progress = atual.GetCarinho();
-	   
+   void AtualizaPersonagem()
+   {
+    ProgressBarSede.Progress = atual.GetSede();
+	ProgressBarFome.Progress = atual.GetFome();
+	 ProgressBarCarinho.Progress = atual.GetCarinho();
+   }  
+
+   void PassouTempo()
+   {
+	var tamorto = atual.GetSeEstiverMorto();
+	atual.SetFome(atual.GetFome() - 0.1);
+	atual.SetSede(atual.GetSede() - 0.1);
+    atual.SetCarinho(atual.GetCarinho() - 0.1);
+	AtualizaPersonagem();
+	if (estavamorto != atual.GetSeEstiverMorto())
+	{
+		fototamorto.Source = atual.GetNomedafoto();
+	}
+   }
 }
         
 
