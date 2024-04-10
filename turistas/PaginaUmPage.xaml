@@ -26,13 +26,15 @@
 
         <Button  Text="Voltar"
                 Clicked="Clicarvoltar"
-                BorderColor="White"
-                TextColor="White"
+                BorderColor="#521d1d"
+                TextColor="#521d1d"
+                BorderWidth="2"
                 Margin="10, 300, 10, 20"
                 HeightRequest="60"
                 CornerRadius="30"
                 BackgroundColor="#c999c3"
-                FontSize="20"
+                FontSize="30"
+                FontFamily="fonte"
                 Grid.ColumnSpan="2"
                 Grid.Row="2"
                 VerticalOptions="EndAndExpand"
@@ -68,8 +70,7 @@
                     Grid.Column="0"/>
 
                     <ProgressBar x:Name="ProgressBarSede"
-                                ProgressColor="White"
-                               
+                                ProgressColor="#521d1d"
                                 Width="100"
                                 Height="20"
                                 Grid.Row="0"
@@ -81,8 +82,7 @@
                     Grid.Column="0"/>
 
                 <ProgressBar x:Name="ProgressBarFome"
-                                ProgressColor="White"
-                                
+                                ProgressColor="#521d1d"
                                 Width="100"
                                 Height="20"
                                 Grid.Row="1"
@@ -94,8 +94,7 @@
 
                     
                 <ProgressBar x:Name="ProgressBarCarinho"
-                            ProgressColor="White"
-                           
+                            ProgressColor="#521d1d"
                             Width="100"
                             Height="20"
                             Grid.Row="2"

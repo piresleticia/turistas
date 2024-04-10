@@ -5,10 +5,11 @@ public class Cavalo:Personagens
 
     public Cavalo() : base()
     {
-      Nomedafoto="cavalo.png";
-      Fome = 0;
-      Sede = 0;
-      Carinho = 0;
+      imgcavalo="cavalo.png";
+      Fome = 1;
+      Sede = 1;
+      Carinho = 1;
+      fototamorto="tamorto.png";
     }
 
 

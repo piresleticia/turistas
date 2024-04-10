@@ -19,22 +19,17 @@ public partial class PaginaUmPage : ContentPage
 
 		atual = cavalo;
 
-		imgcavalo.Source = atual.GetNomedafoto();
+		imgcavalo.Source = atual.Getfototamorto();
 
 		ProgressBarFome.Progress = atual.GetFome();
 
 		var timer=
-		AppAction.Current.Dispatcher.CreateTimer();
+		Application.Current.Dispatcher.CreateTimer();
 		timer.Interval=
 		TimeSpan.FromSeconds(1);
 		timer.Tick+=(s,e)=>
 		PassouTempo();
 		timer.Start();
-
-
-		
-
-
 	}
 
  private void Clicarvoltar(object sender, EventArgs args) 
@@ -42,6 +37,7 @@ public partial class PaginaUmPage : ContentPage
 	  Application.Current.MainPage = new MainPage();
 	  
 	}
+
 
 	void TrocaPersonagem(object sender, EventArgs args)
 	{
@@ -58,7 +54,7 @@ public partial class PaginaUmPage : ContentPage
 		atual= cavalo;
 	 }
 
-	   imgcavalo.Source = atual.GetNomedafoto();
+	 imgcavalo.Source = atual.Getfototamorto();
 	   AtualizaPersonagem();
 	   
 	}
@@ -86,21 +82,23 @@ public partial class PaginaUmPage : ContentPage
     ProgressBarSede.Progress = atual.GetSede();
 	ProgressBarFome.Progress = atual.GetFome();
 	 ProgressBarCarinho.Progress = atual.GetCarinho();
+	imgcavalo.Source= atual.Getfototamorto();
    }  
 
    void PassouTempo()
    {
-	var tamorto = atual.GetSeEstiverMorto();
+	var tamorto = atual.Gettamorto();
 	atual.SetFome(atual.GetFome() - 0.1);
 	atual.SetSede(atual.GetSede() - 0.1);
     atual.SetCarinho(atual.GetCarinho() - 0.1);
 	AtualizaPersonagem();
-	if (estavamorto != atual.GetSeEstiverMorto())
+	if (tamorto != atual.Gettamorto())
 	{
-		fototamorto.Source = atual.GetNomedafoto();
+		 imgcavalo.Source = atual.Getfototamorto();
 	}
    }
 }
+
         
 
 

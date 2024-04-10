@@ -8,17 +8,32 @@
                 Source="inicio.jpg"
                  Aspect="AspectFill"/>
 
-          <Button Text="Inicio"
+          <Button Text="Início"
                  Clicked="ClicarInicio"
-                 BorderColor="White"
-                 TextColor="White"
+                 BorderColor="#521d1d"
+                 BorderWidth="2"
+                 TextColor="#521d1d"
                  Margin="10, 300, 10, 20"
                  HeightRequest="60"
                  CornerRadius="30"
                  BackgroundColor="#c999c3"
-                 FontSize="20"
+                 FontSize="30"
                  VerticalOptions="EndAndExpand"
+                  FontFamily="fonte"
                  HorizontalOptions="FillAndExpand"/>
+
+
+
+
+                    
+     <Label Text="Estábulo Turístico"
+     TextColor="#521d1d"
+     Margin="20"
+     FontSize="40"
+     HorizontalOptions="Center"
+     HorizontalTextAlignment="Center"
+     FontFamily="fonte"/>
+           
 
 
 

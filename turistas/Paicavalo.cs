@@ -5,10 +5,11 @@ public class Paicavalo:Personagens
 
     public   Paicavalo() : base()
     {
-      Nomedafoto="paicavalo.png";
-      Fome = 0;
-      Sede = 0;
-      Carinho = 0;
+      imgcavalo="paicavalo.png";
+      Fome = 1;
+      Sede = 1;
+      Carinho = 1;
+      fototamorto="tamorto.png";
     }
 
 
