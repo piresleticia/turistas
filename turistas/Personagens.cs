@@ -53,9 +53,9 @@ public Personagens()
 public void SetSede(double S)
 {
   Sede = S;
-  if (Sede <= 0)
+  if (Sede <= 0.1)
     {
-      Sede = 0.1;
+      Sede = 0;
       tamorto = true;
     }
 }
